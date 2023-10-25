@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import Routes from "./routes.tsx";
 
-import "./global.scss";
+import "./assets/sass/global.scss";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
