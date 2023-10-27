@@ -4,11 +4,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Jost", sans-serif;
+  font-family: "Onest", sans-serif;
 }
 
 :root {
   --primary-color: #fe7f2d;
   --secondary-color: #233d4d;
   --auxiliar-color: #048ba8;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
