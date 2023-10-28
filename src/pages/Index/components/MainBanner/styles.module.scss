@@ -1,0 +1,106 @@
+@import "../../../../assets/sass/breakpoints.scss";
+
+.main-banner {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  overflow: hidden;
+
+  .bg-image {
+    position: relative;
+    width: 100%;
+  }
+
+  .main-text {
+    position: absolute;
+    top: 27vw;
+    text-align: center;
+    font-weight: 600;
+    font-size: 4.5vw;
+    padding: 0 20vw;
+  }
+
+  .contact-btn {
+    position: absolute;
+    top: 45vw;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 7.5px 12.5px;
+    background-color: transparent;
+    border: 4px solid var(--primary-color);
+    border-radius: 50px;
+    cursor: pointer;
+  }
+
+  @include sm {
+    --bg-y-move: -25%;
+    --bg-scale: 200%;
+
+    max-height: calc(100vh - var(--navbar-height));
+
+    .bg-image {
+      transform: translateY(var(--bg-y-move)) scale(var(--bg-scale));
+    }
+
+    .main-text {
+      top: 20vw;
+    }
+
+    .contact-btn {
+      font-size: 1.5vw;
+      padding: 10px 15px;
+      top: 38vw;
+    }
+  }
+
+  @include md {
+    --bg-scale: 125%;
+    --bg-y-move: -35%;
+
+    .main-text {
+      top: 7vw;
+    }
+
+    .contact-btn {
+      top: 22.5vw;
+    }
+  }
+
+  @include lg {
+    --bg-scale: 100%;
+    --bg-y-move: -35%;
+
+    .main-text {
+      top: 15%;
+    }
+
+    .contact-btn {
+      top: 20vw;
+    }
+  }
+
+  @include xl {
+    --bg-y-move: -42%;
+
+    .main-text {
+      font-size: 4vw;
+      top: 3vw;
+      padding: 0 25%;
+    }
+
+    .contact-btn {
+      top: 14vw;
+      font-size: 1.5vw;
+    }
+  }
+
+  @include xxl {
+    --bg-y-move: -38%;
+
+    .contact-btn {
+      font-size: 1.75rem;
+      top: 43%;
+      padding: 15px 20px;
+    }
+  }
+}
