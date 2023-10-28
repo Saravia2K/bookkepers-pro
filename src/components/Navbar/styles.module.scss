@@ -31,6 +31,7 @@
       left: -100%;
       width: 100vw;
       height: calc(100vh - var(--narvbar-height));
+      z-index: 10;
 
       -webkit-transition: all 0.3s ease;
       -moz-transition: all 0.3s ease;
