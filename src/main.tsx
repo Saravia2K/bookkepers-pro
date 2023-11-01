@@ -3,13 +3,17 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 
 import Routes from "./routes.tsx";
+import Navbar from "./components/Navbar/index.tsx";
 
 import "./assets/sass/global.scss";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>
-      <Routes />
+      <main style={{}}>
+        <Navbar />
+        <Routes />
+      </main>
     </BrowserRouter>
   </React.StrictMode>
 );
