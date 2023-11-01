@@ -1,0 +1,76 @@
+@import "../../../../assets/sass/breakpoints.scss";
+
+.big-border-bottom {
+  border-bottom: 20px solid var(--primary-color);
+}
+
+.box1 {
+  color: #fff;
+  font-size: 6vw;
+
+  .images {
+    display: flex;
+    margin-top: 25px;
+  }
+}
+
+.box2-text {
+  font-size: 5vw;
+}
+
+@include md {
+  .box1 {
+    font-size: 4vw;
+
+    .images {
+      gap: 5.5vw;
+
+      .large-img {
+        width: 60%;
+      }
+
+      .smalls {
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+
+        & > * {
+          height: 50%;
+          object-fit: cover;
+          object-position: 75% 50%;
+        }
+      }
+    }
+  }
+
+  .box2-text {
+    font-size: 3vw;
+  }
+}
+
+@include lg {
+  .box1 {
+    font-size: 2vw;
+    gap: 3vw;
+
+    .images {
+      gap: 3vw;
+
+      .smalls,
+      .large-img {
+        width: 50%;
+      }
+
+      .smalls {
+        gap: 3vw;
+      }
+    }
+  }
+
+  .box2-text {
+    font-size: 1.65vw;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+}
