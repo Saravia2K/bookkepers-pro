@@ -9,9 +9,9 @@ export default function MainBanner() {
   return (
     <div className={styles["main-banner"]}>
       <img src={cityImg} alt="L.A City" className={styles["bg-image"]} />
-      <div className={styles["main-text"]}>
+      <h1 className={styles["main-text"]}>
         Bookkeeping services for small to mid-size business
-      </div>
+      </h1>
       <button
         className={styles["contact-btn"]}
         onClick={() => navigate("/contact")}
