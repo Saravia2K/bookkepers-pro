@@ -1,0 +1,23 @@
+@import "../../assets/sass/breakpoints.scss";
+
+.two-boxes-container {
+  .box {
+    width: 100%;
+    padding: 6vw;
+  }
+
+  @include md {
+    .box {
+      padding: 11vw;
+    }
+  }
+
+  @include lg {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .box {
+      padding: 6.5vw;
+    }
+  }
+}
