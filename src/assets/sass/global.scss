@@ -25,6 +25,11 @@ a {
   color: inherit;
 }
 
+img {
+  width: 100%;
+  object-fit: contain;
+}
+
 @include md {
   :root {
     --navbar-height: 85px;
