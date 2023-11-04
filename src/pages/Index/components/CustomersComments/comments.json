@@ -1,0 +1,14 @@
+[
+  {
+    "customer": { "name": "M. DIAZ", "job": "REGULAR CLIENT" },
+    "comment": "Miguel has done a great job of keeping up with the increasing complexities of my accounting needs for my Personal, investment properties and remodeling business. I really enjoy working with him and feel very safe in his hands."
+  },
+  {
+    "customer": { "name": "ALAIN R.", "job": "SMALL BUSINESS OWNER" },
+    "comment": "I feel confident working with Miguel and his team. It makes my life as a business owner easier knowing that my financials are in order. Meeting with Miguel in person is inspiring. He always offers suggestions for my business in a simple, positive, and intelligent way."
+  },
+  {
+    "customer": { "name": "DAN C.", "job": "SATISFIED CUSTOMER" },
+    "comment": "I can't say enough about Miguel and his team! I came to them a few years ago with no accounting system or whatsoever. I gave Miguel all my paperwork and in a matter of a week he gave all kinds of reports, including my financial reports. Miguel and his team are the best"
+  }
+]
