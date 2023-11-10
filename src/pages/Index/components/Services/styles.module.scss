@@ -134,6 +134,8 @@
   }
 
   @include lg {
+    padding: 5% 7.5%;
+
     .services-description-container .services-description {
       .icon-container {
         width: 60%;
