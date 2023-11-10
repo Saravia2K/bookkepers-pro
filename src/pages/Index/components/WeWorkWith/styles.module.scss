@@ -1,0 +1,78 @@
+@import "../../../../assets/sass/breakpoints.scss";
+
+.we-work-with {
+  text-align: center;
+  padding: 0 15px;
+
+  .title {
+    font-size: 10vw;
+    margin-bottom: 5vw;
+    font-weight: normal;
+
+    .highlight {
+      color: var(--primary-color);
+    }
+  }
+
+  .description {
+    color: #000;
+    margin-bottom: 25px;
+  }
+
+  .carousel-container {
+    .carousel-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .carousel-control :global {
+      position: absolute;
+      border: 4px solid var(--primary-color);
+      background-color: #fff;
+      bottom: 0;
+
+      svg {
+        scale: 1.5;
+        fill: var(--secondary-color);
+      }
+    }
+  }
+
+  @include md {
+    padding: 0 50px;
+
+    .title {
+      font-size: 6.5vw;
+    }
+  }
+
+  @include lg {
+    --text-side-margin: 150px;
+
+    .title,
+    .description {
+      margin: 0 var(--text-side-margin);
+    }
+
+    .title {
+      font-size: 4.5vw;
+    }
+
+    .description {
+      margin-bottom: 25px;
+    }
+  }
+
+  @include xl {
+    --text-side-margin: 12vw;
+
+    .title {
+      font-size: 3.5vw;
+    }
+
+    .description {
+      font-size: 1.5vw;
+    }
+  }
+}
