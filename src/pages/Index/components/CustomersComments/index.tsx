@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import CommentsCarousel from "./CommentsCarousel";
 import styles from "./styles.module.scss";
 
@@ -12,6 +13,9 @@ export default function CustomersComments() {
         customers!
       </p>
       <CommentsCarousel />
+      <Link to="/contact" className={styles["schedule-info"]}>
+        Schedule your FREE 2 hour consultation
+      </Link>
     </section>
   );
 }
