@@ -1,0 +1,86 @@
+@import "../../assets/sass/breakpoints.scss";
+
+.card {
+  --gap: 25px;
+
+  padding: 10vw;
+  border: 5px solid var(--primary-color);
+  border-bottom-width: 25px;
+  margin: 0 25px;
+
+  .card-icon-container {
+    position: relative;
+    display: inline-block;
+    background-color: #dbdddd;
+    padding: 5vw;
+    margin-bottom: var(--gap);
+    aspect-ratio: 1;
+
+    .card-icon {
+      position: relative;
+      width: 50px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .card-title {
+    font-size: 7vw;
+    margin-bottom: var(--gap);
+  }
+
+  .card-content {
+    font-size: 5vw;
+    margin-bottom: var(--gap);
+  }
+
+  @include md {
+    padding: 5vw;
+
+    .card-icon-container {
+      padding: 3vw;
+    }
+
+    .card-title {
+      font-size: 3vw;
+    }
+
+    .card-content {
+      font-size: 2vw;
+    }
+  }
+
+  @include lg {
+    padding: 5vw;
+
+    .card-icon-container {
+      padding: 3vw;
+    }
+
+    .card-title {
+      font-size: 3vw;
+    }
+
+    .card-content {
+      font-size: 2vw;
+    }
+  }
+
+  @include xl {
+    width: 100%;
+    margin: 0;
+    padding: 2vw;
+
+    .card-icon-container {
+      padding: 1.5vw;
+    }
+
+    .card-title {
+      font-size: 1.5vw;
+    }
+
+    .card-content {
+      font-size: 1.25vw;
+    }
+  }
+}

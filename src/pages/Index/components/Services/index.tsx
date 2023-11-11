@@ -4,6 +4,7 @@ import styles from "./styles.module.scss";
 import OurServicesCards from "./services";
 import StarIcon from "../../../../assets/icons/Star";
 import DiskIcon from "../../../../assets/icons/Disk";
+import OrangeBorderCard from "../../../../components/OrangeBorderCard";
 
 export default function Services() {
   return (
@@ -21,14 +22,13 @@ export default function Services() {
       <div className={styles["our-services"]}>
         <h2 className={styles.title}>Our Services</h2>
         <div className={styles.cards}>
-          {OurServicesCards.map(({ icon: Icon, title, content }) => (
-            <div key={title} className={styles.card}>
-              <div className={styles["card-icon-container"]}>
-                <Icon className={styles["card-icon"]} />
-              </div>
-              <h3 className={styles["card-title"]}>{title}</h3>
-              <p className={styles["card-content"]}>{content}</p>
-            </div>
+          {OurServicesCards.map(({ icon, title, content }) => (
+            <OrangeBorderCard
+              key={title}
+              title={title}
+              content={content}
+              icon={icon}
+            />
           ))}
         </div>
       </div>
