@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import Routes from "./routes.tsx";
 import Navbar from "./components/Navbar/index.tsx";
+import Footer from "./components/Footer/index.tsx";
 
 import "./assets/sass/global.scss";
 
@@ -13,6 +14,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <main style={{}}>
         <Navbar />
         <Routes />
+        <Footer />
       </main>
     </BrowserRouter>
   </React.StrictMode>
