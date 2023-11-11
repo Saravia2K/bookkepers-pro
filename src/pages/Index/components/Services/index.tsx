@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 
 import styles from "./styles.module.scss";
-import OurServicesCards from "./services";
+import { services } from "../../../../consts";
 import StarIcon from "../../../../assets/icons/Star";
 import DiskIcon from "../../../../assets/icons/Disk";
 import OrangeBorderCard from "../../../../components/OrangeBorderCard";
 
+const OurServicesCards = services.slice(0, 4);
 export default function Services() {
   return (
     <section id="services" className={styles.services}>
