@@ -11,7 +11,7 @@ import "./assets/sass/global.scss";
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>
-      <main style={{}}>
+      <main>
         <Navbar />
         <Routes />
         <Footer />
