@@ -2,6 +2,7 @@
 
 .footer {
   --pt: 3%;
+  border-top: 2px solid #cccccc;
 
   &.index {
     padding-top: var(--pt);
