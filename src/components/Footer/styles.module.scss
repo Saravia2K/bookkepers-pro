@@ -1,0 +1,100 @@
+@import "../../assets/sass/breakpoints.scss";
+
+.footer {
+  --pt: 3%;
+
+  &.index {
+    padding-top: var(--pt);
+  }
+
+  .contact {
+    display: grid;
+    padding: 5%;
+    align-content: center;
+
+    .logo {
+      padding: 5%;
+    }
+
+    .contact-us {
+      display: grid;
+      justify-content: center;
+      gap: 10px;
+      padding-left: 5%;
+
+      .contact-us-title {
+        font-size: 20px;
+        padding-left: calc(10% + 15px);
+      }
+
+      .contact-us-item {
+        display: grid;
+        grid-template-columns: 10% 1fr;
+        gap: 15px;
+      }
+    }
+
+    .social-networks {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      .social-network-link {
+        position: relative;
+        padding: 10%;
+        margin-top: 20px;
+
+        svg {
+          position: relative;
+          width: 50%;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+
+  .copyright {
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 5%;
+    text-align: center;
+  }
+
+  @include md {
+    .contact {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+
+      .social-networks {
+        grid-column-start: span 2;
+      }
+    }
+
+    .copyright {
+      padding: 2%;
+    }
+  }
+
+  @include lg {
+    --pt: 5%;
+
+    .contact {
+      grid-template-columns: 1fr 1fr 0.8fr;
+      padding: 5% 3%;
+
+      .social-networks {
+        grid-column-start: unset;
+
+        svg {
+          width: 80% !important;
+        }
+      }
+    }
+  }
+
+  @include xl {
+    .copyright {
+      padding: 1%;
+    }
+  }
+}
