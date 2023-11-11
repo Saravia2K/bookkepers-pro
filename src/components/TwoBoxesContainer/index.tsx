@@ -5,7 +5,7 @@ export default function TwoBoxesContainer({ box1, box2 }: Props) {
   const boxes = [box1, box2];
 
   return (
-    <div className={styles["two-boxes-container"]}>
+    <section className={styles["two-boxes-container"]}>
       {boxes.map((b, i) => (
         <div
           key={i}
@@ -17,7 +17,7 @@ export default function TwoBoxesContainer({ box1, box2 }: Props) {
           {b?.component}
         </div>
       ))}
-    </div>
+    </section>
   );
 }
 

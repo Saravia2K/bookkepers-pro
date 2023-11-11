@@ -7,7 +7,7 @@ export default function MainBanner() {
   const navigate = useNavigate();
 
   return (
-    <div className={styles["main-banner"]}>
+    <section className={styles["main-banner"]}>
       <img src={cityImg} alt="L.A City" className={styles["bg-image"]} />
       <h1 className={styles["main-text"]}>
         Bookkeeping services for small to mid-size business
@@ -18,6 +18,6 @@ export default function MainBanner() {
       >
         Contact Us
       </button>
-    </div>
+    </section>
   );
 }
