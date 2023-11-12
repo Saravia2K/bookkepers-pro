@@ -1,0 +1,53 @@
+@import "../../assets/sass/breakpoints.scss";
+
+.cards-list-section {
+  padding: 10% 5%;
+
+  .main-title {
+    text-align: center;
+    font-size: 10vw;
+  }
+
+  .description {
+    margin-top: 25px;
+  }
+
+  .cards {
+    display: grid;
+    gap: 15px;
+    margin: 10% 0;
+  }
+
+  @include md {
+    .main-title {
+      font-size: 5vw;
+    }
+
+    .description {
+      padding: 0 5%;
+    }
+
+    .cards {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @include xl {
+    padding: 5% 15%;
+
+    .main-title {
+      font-size: 3.5vw;
+    }
+
+    .description {
+      font-size: 1.5vw;
+      padding: 0;
+    }
+
+    .cards {
+      margin: 5% 0;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 5%;
+    }
+  }
+}
