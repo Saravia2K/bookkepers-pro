@@ -11,7 +11,11 @@ export default function Navbar() {
   const [windowSize, setWindowSize] = useState(window.innerWidth);
   const ResponsiveRoutesListRef = useRef<HTMLDivElement | null>(null);
   const navigate = useNavigate();
+  const { pathname } = useLocation();
 
+  //#region useEffects
+  // Updating windowsSize when windows is being resized
+  // to use value inside component
   useEffect(() => {
     const changeWindowSizeState = () => {
       setWindowSize(window.innerWidth);
@@ -22,6 +26,13 @@ export default function Navbar() {
     return () => window.removeEventListener("resize", changeWindowSizeState);
   }, []);
 
+  // Scrolling window to top when route change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  //#endregion
+
+  //#region Handlers
   const handleMenuIconClick = () => {
     ResponsiveRoutesListRef.current?.classList.toggle(styles.active);
   };
@@ -34,6 +45,7 @@ export default function Navbar() {
     navigate("/");
     closeNavbar();
   };
+  //#endregion
 
   const closeNavbar = () =>
     ResponsiveRoutesListRef.current?.classList.remove(styles.active);
