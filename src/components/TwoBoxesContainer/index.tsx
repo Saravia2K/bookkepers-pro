@@ -17,7 +17,7 @@ export default function TwoBoxesContainer({
       {boxes.map((b, i) => (
         <div
           key={i}
-          className={styles.box}
+          className={`${styles.box} ${b?.className || ""}`}
           style={{
             backgroundColor: b?.bgColor,
           }}
@@ -38,4 +38,5 @@ type Props = {
 type Box = {
   bgColor?: string;
   component: ReactElement;
+  className?: string;
 };
