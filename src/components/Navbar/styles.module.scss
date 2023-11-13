@@ -58,6 +58,10 @@
 
   .navbar-container {
     display: none;
+
+    .navbar-logo {
+      cursor: pointer;
+    }
   }
 
   .urls-list {
