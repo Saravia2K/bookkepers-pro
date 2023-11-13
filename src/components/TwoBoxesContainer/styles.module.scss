@@ -4,6 +4,10 @@
   display: flex;
   flex-direction: column-reverse;
 
+  &.reverse {
+    flex-direction: column;
+  }
+
   .box {
     width: 100%;
     padding: 6vw;
