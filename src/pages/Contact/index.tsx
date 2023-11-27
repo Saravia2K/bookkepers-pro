@@ -1,5 +1,9 @@
+import { useState } from "react";
 import { useForm, Controller, SubmitHandler } from "react-hook-form";
-import { TextField } from "@mui/material";
+import { toast } from "react-toastify";
+import emailjs from "@emailjs/browser";
+import { CircularProgress, TextField } from "@mui/material";
+
 import TwoBoxesContainer from "../../components/TwoBoxesContainer";
 
 import styles from "./styles.module.scss";
@@ -31,6 +35,7 @@ export default function ContactPage() {
 }
 
 const Box1 = () => {
+  const [sendingForm, setSendingForm] = useState(false);
   const { control, handleSubmit } = useForm<FormInputs>({
     defaultValues: {
       email: "",
@@ -41,8 +46,22 @@ const Box1 = () => {
     },
   });
 
-  const handleSubmitForm: SubmitHandler<FormInputs> = (data) => {
-    console.log(data);
+  const handleSubmitForm: SubmitHandler<FormInputs> = async (data) => {
+    setSendingForm(true);
+    const response = await emailjs.send(
+      "service_49z7br9",
+      "template_zzgtoih",
+      data,
+      "-GKy4JE4KBwEmxDNp"
+    );
+    setSendingForm(false);
+    const message =
+      response.status == 200
+        ? "Form submitted successfully"
+        : `Error: ${response.text}`;
+    toast(message, {
+      type: response.status == 200 ? "success" : "error",
+    });
   };
 
   return (
@@ -59,6 +78,7 @@ const Box1 = () => {
             <TextField
               fullWidth
               required
+              autoComplete="off"
               type="email"
               placeholder="Email"
               className={styles["form-input"]}
@@ -74,6 +94,7 @@ const Box1 = () => {
             <TextField
               fullWidth
               required
+              autoComplete="off"
               placeholder="Phone"
               className={styles["form-input"]}
               value={value}
@@ -88,6 +109,7 @@ const Box1 = () => {
             <TextField
               fullWidth
               required
+              autoComplete="off"
               placeholder="Company name"
               className={styles["form-input"]}
               value={value}
@@ -102,6 +124,7 @@ const Box1 = () => {
             <TextField
               fullWidth
               required
+              autoComplete="off"
               placeholder="Department"
               className={styles["form-input"]}
               value={value}
@@ -118,6 +141,7 @@ const Box1 = () => {
               required
               multiline
               rows={5}
+              autoComplete="off"
               placeholder="Message"
               className={styles["form-input"]}
               value={value}
@@ -125,7 +149,17 @@ const Box1 = () => {
             />
           )}
         />
-        <button className={styles["submit-btn"]}>SEND</button>
+        <button className={styles["submit-btn"]} disabled={sendingForm}>
+          {sendingForm ? (
+            <CircularProgress
+              style={{
+                color: "var(--primary-color)",
+              }}
+            />
+          ) : (
+            "SEND"
+          )}
+        </button>
       </form>
     </div>
   );
