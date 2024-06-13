@@ -33,8 +33,8 @@
   }
 
   @include sm {
-    --bg-y-move: -25%;
-    --bg-scale: 200%;
+    --bg-y-move: 60%;
+    --bg-scale: 225%;
 
     max-height: calc(100vh - var(--navbar-height));
 
@@ -54,8 +54,8 @@
   }
 
   @include md {
-    --bg-scale: 125%;
-    --bg-y-move: -35%;
+    --bg-scale: 175%;
+    --bg-y-move: 30%;
 
     .main-text {
       top: 7vw;
@@ -67,8 +67,8 @@
   }
 
   @include lg {
-    --bg-scale: 100%;
-    --bg-y-move: -35%;
+    --bg-scale: 150%;
+    --bg-y-move: 25%;
 
     .main-text {
       top: 15%;
@@ -80,8 +80,6 @@
   }
 
   @include xl {
-    --bg-y-move: -42%;
-
     .main-text {
       font-size: 3.5vw;
       top: 3vw;
@@ -95,8 +93,6 @@
   }
 
   @include xxl {
-    --bg-y-move: -38%;
-
     .contact-btn {
       font-size: 1.75rem;
       top: 43%;
